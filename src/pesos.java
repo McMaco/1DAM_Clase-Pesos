@@ -121,9 +121,12 @@ public class pesos {
 			System.out.println("Introduce la cantidad: ");
 			peso_intr = teclado.nextInt();
 		}while (peso_intr < 0);
+		
 		Scanner pedirmedida= new Scanner(System.in);
+		
 		System.out.println("Introduce una medida: \n Lb(libras)\n Li(lingotes)\n Oz(onzas)\n P(peniques)\n K(kilogramos)\n G(gramos)\n Q(quintales)");
 		medida_intr = pedirmedida.next();
+		
 		pesos p = new pesos(peso_intr, medida_intr);
 		
 		System.out.println("Muestra el peso en kilogramos: "+ p.getKilogramos());
@@ -131,8 +134,10 @@ public class pesos {
 		System.out.println("Muestra el peso en lingotes: "+ p.getLingotes());
 		
 		Scanner read = new Scanner(System.in);
+		
 		System.out.println("Introduce una medida: \n Lb(libras)\n Li(lingotes)\n Oz(onzas)\n P(peniques)\n K(kilogramos)\n G(gramos)\n Q(quintales)");
 		unid = read.next();
+		
 		System.out.println("Muestra el peso en "+ unid +": "+ p.getPeso(unid));
 	}
 }
